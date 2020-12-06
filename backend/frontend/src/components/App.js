@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 import ReviewList from "./ReviewList"
-// import 'bootstrap/dist/css/bootstrap.min.css';
+// import "../../static/css/index.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default class App extends Component {

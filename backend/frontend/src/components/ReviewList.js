@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-import { Button } from 'react-bootstrap';
+import { Accordion, Button } from 'react-bootstrap';
 
 export default class ReviewList extends Component {
   state = {
@@ -20,7 +20,8 @@ export default class ReviewList extends Component {
     <table className=" mt-2" style={{width: '100%'}}>
         <thead>
             <tr style={{borderBottom: '1px solid black'}}>
-                <th scope="col">GAME</th>
+                <th scope="col">TITLE</th>
+                <th scope="col">DEVELOPER</th>
                 <th scope="col">YEAR RELEASED</th>
                 <th scope="col">GENRE(s)</th>
             </tr>
@@ -28,14 +29,17 @@ export default class ReviewList extends Component {
         <tbody>
             {this.state.reviews.map(item => (
             <tr>
-                <td className="">TITLE: {item.title}</td>
-                <td className="">AUTHOR: {item.author}</td>
-                <td className="" dangerouslySetInnerHTML={{__html: item.body}}></td>  
+                <td className="">{item.title}</td>
+                <td className="">{item.developer}</td>
+                <td className="">{item.release_date}</td>
+                <td className="">{item.tags}</td>
+                {/* <td className="" dangerouslySetInnerHTML={{__html: item.body}}></td>   */}
             </tr>
             ))}
         </tbody>
         
       </table>
+      
     );
   }
 }

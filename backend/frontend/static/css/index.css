@@ -1,0 +1,15 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+th {
+    border-bottom: 1px solid black;
+}
+
+tr {
+    border-bottom: 1px solid black;
+}
+

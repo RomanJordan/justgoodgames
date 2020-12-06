@@ -2,21 +2,25 @@ const path = require("path");
 const webpack = require("webpack");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/index.js", 
   output: {
     path: path.resolve(__dirname, "./static/frontend"),
     filename: "[name].js",
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.css'],
+      
+  },
   module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-        },
-      },
-    ],
+    rules: [{
+      test: /\.js$/,
+      exclude: /node_modules/,
+      use: ["babel-loader"]
+    },{
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader']
+    }]
+    
   },
   optimization: {
     minimize: true,
