@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-import { Accordion, Button } from 'react-bootstrap';
+import { Accordion, Button, Card, } from 'react-bootstrap';
 
 export default class ReviewList extends Component {
   state = {
@@ -17,28 +17,32 @@ export default class ReviewList extends Component {
 
   render() {
     return (
-    <table className=" mt-2" style={{width: '100%'}}>
-        <thead>
-            <tr style={{borderBottom: '1px solid black'}}>
-                <th scope="col">TITLE</th>
-                <th scope="col">DEVELOPER</th>
-                <th scope="col">YEAR RELEASED</th>
-                <th scope="col">GENRE(s)</th>
-            </tr>
-        </thead>
-        <tbody>
+    <div >
+        <div className="row" style={{borderBottom: '1px solid black'}}>
+                <p className="col">TITLE</p>
+                <p className="col">DEVELOPER</p>
+                <p className="col">YEAR</p>
+                <p className="col">GENRE(s)</p>
+            
+        </div>
             {this.state.reviews.map(item => (
-            <tr>
-                <td className="">{item.title}</td>
-                <td className="">{item.developer}</td>
-                <td className="">{item.release_date}</td>
-                <td className="">{item.tags}</td>
-                {/* <td className="" dangerouslySetInnerHTML={{__html: item.body}}></td>   */}
-            </tr>
+              <div>
+                <a data-toggle="collapse" href={'#collapse'+item.id} role="button" aria-expanded="false" aria-controls={item.id}>
+                  <div className="row" style={{borderBottom: '1px solid black'}}>
+                    <p className="col mb-3 mt-3">{item.title}</p>
+                    <p className="col mb-3 mt-3">{item.developer}</p>
+                    <p className="col mb-3 mt-3">{item.release_date}</p>
+                    <p className="col mb-3 mt-3">PRETEND TAG</p>
+                  </div>
+                </a>
+                <div class="collapse" id={'collapse'+item.id}>
+                  <div class="">
+                    <p dangerouslySetInnerHTML={{__html: item.body}}></p>
+                  </div>
+                </div>
+              </div>
             ))}
-        </tbody>
-        
-      </table>
+      </div>
       
     );
   }

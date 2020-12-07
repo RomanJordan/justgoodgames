@@ -71,6 +71,7 @@ class Review(models.Model):
     title = models.CharField(max_length=100, blank=False, editable=True, default='', db_index=True)
     release_date = models.DateField(default=timezone.now)
     developer = models.CharField(max_length=100, blank=False, editable=True, default="N/A")
+    genre = models.CharField(max_length=100, blank=False, editable=True, default="N/A")
     author = models.ForeignKey('User', on_delete=models.CASCADE, primary_key=False)
     body = HTMLField()
     slug = models.SlugField()
