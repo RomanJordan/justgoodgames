@@ -140,14 +140,10 @@ STATIC_URL = '/static/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 AUTH_USER_MODEL = 'core.User'
 
-# REST_FRAMEWORK = {
-#     'DEFAULT_RENDERER_CLASSES': (
-#         'rest_framework.renderers.JSONRenderer',
-#     )
-# }
+STATIC_ROOT = ''
 
-# CORS_ORIGIN_WHITELIST = (
-#     'localhost:8000/'
-# )
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = ( os.path.join('static'), )
 
 CORS_ORIGIN_ALLOW_ALL = True

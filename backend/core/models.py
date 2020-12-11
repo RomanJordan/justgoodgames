@@ -6,6 +6,7 @@ from django_countries.fields import CountryField
 from django.contrib.auth.models import AbstractUser, UserManager
 from tinymce.models import HTMLField
 from taggit.managers import TaggableManager
+from PIL import Image
 
 class CustomUserManager(UserManager):
     def get_by_natural_key(self, username):
@@ -72,8 +73,11 @@ class Review(models.Model):
     release_date = models.DateField(default=timezone.now)
     developer = models.CharField(max_length=100, blank=False, editable=True, default="N/A")
     genre = models.CharField(max_length=100, blank=False, editable=True, default="N/A")
+    image = models.ImageField(upload_to='static/images', blank=True)
     author = models.ForeignKey('User', on_delete=models.CASCADE, primary_key=False)
     body = HTMLField()
+    play_if_you_like = HTMLField()
+    # rating = models.IntegerField
     slug = models.SlugField()
     tags = TaggableManager()
 

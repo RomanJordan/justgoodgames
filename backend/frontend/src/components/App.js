@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 import ReviewList from "./ReviewList"
+import Nav from "./Nav"
 // import "../../static/css/index.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -12,8 +13,10 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="container-fluid">
+      <div className="">
+        <Nav></Nav>
         <ReviewList></ReviewList>
+        
       </div>
     );
   }

@@ -17,7 +17,7 @@ export default class ReviewList extends Component {
 
   render() {
     return (
-    <div >
+    <div className="container-fluid">
         <div className="row" style={{borderBottom: '1px solid black'}}>
                 <p className="col">TITLE</p>
                 <p className="col">DEVELOPER</p>
@@ -28,7 +28,7 @@ export default class ReviewList extends Component {
             {this.state.reviews.map(item => (
               <div>
                 <a data-toggle="collapse" href={'#collapse'+item.id} role="button" aria-expanded="false" aria-controls={item.id}>
-                  <div className="row" style={{borderBottom: '1px solid black'}}>
+                  <div className="row" style={{borderTop: '1px solid black'}}>
                     <p className="col mb-3 mt-3">{item.title}</p>
                     <p className="col mb-3 mt-3">{item.developer}</p>
                     <p className="col mb-3 mt-3">{item.release_date}</p>
@@ -36,8 +36,14 @@ export default class ReviewList extends Component {
                   </div>
                 </a>
                 <div class="collapse" id={'collapse'+item.id}>
-                  <div class="">
-                    <p dangerouslySetInnerHTML={{__html: item.body}}></p>
+                  <div className="row mb-1 mt-1">
+                    <img className="col-3" src={ item.image } style={{width: '100%', height: '100%'}}></img>
+                    <div className="col-9">
+                      <p  dangerouslySetInnerHTML={{__html: item.body}}></p>
+                      <p  dangerouslySetInnerHTML={{__html: item.body}}></p>
+                      <p  dangerouslySetInnerHTML={{__html: item.body}}></p>
+                    </div>
+                    
                   </div>
                 </div>
               </div>
