@@ -4,7 +4,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', index)
+    path('', index),
+    path('contact', index)
 ]
 
 if settings.DEBUG:

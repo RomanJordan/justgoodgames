@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-import ReviewList from "./ReviewList"
-import Nav from "./Nav"
+import Main from "./Main"
+import Contact from "./Contact"
 // import "../../static/css/index.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 
 
 export default class App extends Component {
@@ -13,11 +14,12 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="">
-        <Nav></Nav>
-        <ReviewList></ReviewList>
-        
-      </div>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Main}/>
+          <Route path="/contact" component={Contact} />
+        </Switch>
+      </Router>
     );
   }
 }

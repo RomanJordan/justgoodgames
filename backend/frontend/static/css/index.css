@@ -13,3 +13,18 @@ tr {
     border-bottom: 1px solid black;
 }
 
+.form-control {
+  border-radius: 0px;
+}
+
+
+
+#review-row {
+  color: black;
+}
+
+#reviews {
+  color: black;
+  text-decoration: none;
+}
+

@@ -4,6 +4,7 @@ from django.utils.text import slugify
 from django.urls import reverse
 from django_countries.fields import CountryField
 from django.contrib.auth.models import AbstractUser, UserManager
+from pkg_resources import require
 from tinymce.models import HTMLField
 from taggit.managers import TaggableManager
 from PIL import Image
@@ -97,3 +98,10 @@ class Review(models.Model):
 
     class Meta:
         verbose_name_plural = "Reviews"
+
+class UserRecommendation(models.Model):
+    name = models.CharField(max_length=100, blank=False, editable=True, default='')
+    email = models.EmailField(blank=False)
+    title = models.CharField(max_length=100, blank=False, editable=True, default='', db_index=True)
+    link = models.URLField(blank=True, help_text="Where else can I read about the film? e.g. wikipedia, or IMDB page")
+    synopsis = models.TextField(blank=False, help_text="Give a brief description of the game, in your own words.")
