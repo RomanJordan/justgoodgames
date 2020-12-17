@@ -7,6 +7,7 @@
 
 ##### The core model of this website lies with the Django backend, which we have used to create our "recommendation" model. The model has attributes such as a title, release date, developer, body text, and associated boxart image. Django allows us to easily create a RESTful API & serializer. The Django serializer allows us to take our complex recommendation model, and convert it to Python, which can then be rendered as JSON. This can also work in reverse, as with the contact page. The contact page allows any user to make their own recommenation in a form, with the same fields we used in our recommendation model. This user generated recommendation is then inserted into another table in the database, where it can be reviewed, and either accepted or denied. All this data is being stored in a PostgreSQL database.
 
+### Trello board - https://trello.com/b/wUy0U2rC/just-good-games
 
 ### Front Page
 ![Alt text](https://raw.githubusercontent.com/RomanJordan/justgoodgames/main/backend/images/frontpage.png?token=AHYFX6AKRIPEQB4WKLID36C74QDUM "Front Page")
