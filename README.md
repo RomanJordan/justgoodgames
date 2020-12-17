@@ -21,4 +21,4 @@
 ![Alt text](https://raw.githubusercontent.com/RomanJordan/justgoodgames/main/backend/images/contact.png?token=AHYFX6CLPM2LD6DF35KR3IK74QEQG "Contact")
 
 ### Mobile responsive contact page
-![Alt text](https://raw.githubusercontent.com/RomanJordan/justgoodgames/main/backend/images/contact.png?token=AHYFX6CLPM2LD6DF35KR3IK74QEQG "Mobile responsive contact page")
+![Alt text](https://raw.githubusercontent.com/RomanJordan/justgoodgames/main/backend/images/contact_mobile.png?token=AHYFX6E7B6YLQZ2QHRVSRO274QE2Y "Mobile responsive contact page")
