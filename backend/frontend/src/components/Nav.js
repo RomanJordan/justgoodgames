@@ -16,7 +16,6 @@ export default class Nav extends Component {
             <li class="nav-item">
                 <a class="nav-link" href="#">Dark Mode</a>
             </li>
-            
         </ul>
             </nav>
         )
