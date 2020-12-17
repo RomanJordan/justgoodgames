@@ -24,6 +24,7 @@ export default class Contact extends Component {
             synopsis: synopsis          
         }, {headers:{'Content-Type': 'application/json'}})
         .then(res => console.log(res))
+        alert("Thanks for the recommendation!");
         window.location.reload()
         .catch(err => console.error(err))
         

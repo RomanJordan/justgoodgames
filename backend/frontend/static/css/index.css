@@ -17,6 +17,10 @@ tr {
   border-radius: 0px;
 }
 
+#brand {
+  text-decoration: none;
+  color: black;
+}
 
 
 #review-row {
