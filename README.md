@@ -12,4 +12,7 @@
 ![Alt text](https://raw.githubusercontent.com/RomanJordan/justgoodgames/main/backend/images/frontpage.png?token=AHYFX6AKRIPEQB4WKLID36C74QDUM "Front Page")
 
 #### Front Page with items expanded
-![Alt text](https://raw.githubusercontent.com/RomanJordan/justgoodgames/main/backend/images/frontpage_opened.png?token=AHYFX6DUAU5BHWRTMFJA4X274QEG6 "Front Page")
+![Alt text](https://raw.githubusercontent.com/RomanJordan/justgoodgames/main/backend/images/frontpage_opened.png?token=AHYFX6DUAU5BHWRTMFJA4X274QEG6 "Front Page with items expanded")
+
+#### Mobile responsive front page
+![Alt text](https://raw.githubusercontent.com/RomanJordan/justgoodgames/main/backend/images/6.png?token=AHYFX6GMEONROF6EKT7OWS274QEOS "Mobile front page with items expanded")
